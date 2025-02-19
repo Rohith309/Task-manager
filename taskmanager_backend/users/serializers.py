@@ -23,6 +23,7 @@ class UserSerializer(serializers.ModelSerializer):
         if User.objects.filter(username=value).exists():
             raise serializers.ValidationError("Username already exists")
         return value
+    
 
     def create(self, validated_data):
         try:

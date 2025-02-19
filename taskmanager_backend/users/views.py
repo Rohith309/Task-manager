@@ -9,7 +9,7 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import ensure_csrf_cookie
 from django.utils.decorators import method_decorator
 from datetime import datetime
-from .models import Task
+from .models import Task 
 from .serializers import TaskSerializer, UserSerializer
 
 @method_decorator(ensure_csrf_cookie, name='dispatch')
