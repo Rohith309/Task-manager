@@ -54,16 +54,18 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'taskmanager_backend.wsgi.application'
-
+from dotenv import load_dotenv
+import os
+load_dotenv() 
 # Database configuration
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'taskmanager_db',
-        'USER': 'root',
-        'PASSWORD': 'Rohith140503',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),
+        'PORT': os.getenv('DB_PORT'),
     }
 }
 
