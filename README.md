@@ -20,8 +20,4 @@ A modern, brutalist-style task management application built with React and Djang
 - Axios for API calls
 - CSS3 with Modern Design Principles
 
-### Backend
-- Django
-- Django REST Framework
-- MySql Database
 
